@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabaña Ruhe </title>
+    <link rel="stylesheet" href="../styles/cabañaruhe.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+                <a href="../index.html">
+                <img src="../public/logo.png" alt="Logo" width="50"></a>
+                <span>Ruhe</span>
+            </div>
+            <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+            <ul class="menu">
+                <li><a href="../index.html">Volver</a></li>
+                <li><a href="../pages/reserva.html">Reserva</a></li>
+                <li><a href="#">Ubicación</a></li>
+                <li><a href="#">Tarifa</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Administración Ruhe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>  
+        <div class="principal">
+            <h1>Cabaña Ruhe</h1>
+            <p>Disfrutá de la calidez de la cabaña Ruhe y todas sus comodidades en cualquier epoca del año. Cabaña gran capacidad y
+                recomendada por su comodidad. Un hospedaje completo hogareño con un tono familiar, donde la tranquilidad y relax es la
+                vista de los Cordones del Chapelco y nuestro jardín ⛰🏔🌳
+            </p>
+            <p>Cabaña <strong> completamente equipada</strong>  para no te preocupes de que te falte nada.</p>
+            <h2>INFORMACIÓN</h2>
+            <section class="fotos_info">
+                <div><img src="../public/capacidad_6_personas.png" alt="Capacidad 6 personas"><span>Capacidad 6 personas</span></div>
+                <div><img src="../public/1_cocina_completa.png" alt="1 Cocina Completa"><span>1 Cocina Completa</span></div>
+                <div><img src="../public/1_living_comedor.png" alt="1 Living Comedor"><span>1 Living Comedor</span></div>
+                <div><img src="../public/1_baño_completo.png" alt="1 Baño Completo."><span>1 Baño Completo.</span></div>
+                <div><img src="../public/78m2.png" alt="78m²"><span>78m²</span></div>
+                <div><img src="../public/2_dormitorios_aoblados.png" alt="2 Dormitorios amoblados"><span>2 Dormitorios amoblados</span></div>
+                <div><img src="../public/1_cama_matrimonial_queen.png" alt="1 Cama matrimonial Queen"><span>1 Cama matrimonial Queen</span></div>
+                <div><img src="../public/3_camas_individuales_twin_xl.png" alt="3 Camas individuales Twin XL"><span>3 Camas individuales Twin XL</span></div>
+                <div><img src="../public/1_sofa_caa.png" alt="1 Sofá cama"><span>1 Sofá cama</span></div>
+            </section>
+            <h2>SERVICIOS</h2>
+            <section class="fotos_servi">
+                <div class="item-servicio"><img src="../public/Wi-Fi_Starlink.png" alt=""><span>Wi-Fi Starlink</span></div>
+                <div class="item-servicio"><img src="../public/vista_Y_acceso_a_la_montaña.png" alt=""><span>Vista y Acceso a la montaña</span></div>
+                <div class="item-servicio"><img src="../public/merienda_de_bienvenida.png" alt=""><span>Merienda de Bienvenida</span></div>
+                
+                <div class="item-servicio"><img src="../public/TV_FHD_43'' Streaming_Incluido.png" alt=""><span>TV FHD 43'' Streaming Incluido</span></div>
+                <div class="item-servicio"><img src="../public/calefaccion_por_piso_radiante.png" alt=""><span>Calefacción por Piso Radiante</span></div>
+                <div class="item-servicio"><img src="../public/estacionamiento_privado.png" alt=""><span>Estacionamiento privado</span></div>
+
+                <div class="item-servicio"><img src="../public/bañera_con_ducha_y_bidet.png" alt=""><span>Bañera con ducha y bidet</span></div>
+                <div class="item-servicio"><img src="../public/Set_Toalla _y_ toallón_630grm.png" alt=""><span>Set Toalla y toallón 630grm</span></div>
+                <div class="item-servicio"><img src="../public/elementos_de_higuiene.png" alt=""><span>Elementos de higiene</span></div>
+
+                <div class="item-servicio"><img src="../public/microondas.png" alt=""><span>Microondas</span></div>
+                <div class="item-servicio"><img src="../public/parilla_tipo_chulengo.png" alt=""><span>Parrilla tipo chulengo</span></div>
+                <div class="item-servicio"><img src="../public/secador_de_pelo.png" alt=""><span>Secador de Pelo</span></div>
+
+                <div class="item-servicio"><img src="../public/jardin_privado.png" alt=""><span>Jardín privado.</span></div>
+                <div class="item-servicio"><img src="../public/cocina_equipada.png" alt=""><span>Cocina Equipada</span></div>
+                <div class="item-servicio"><img src="../public/humidificador.png" alt=""><span>Humidificador</span></div>
+            </section>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('show');
+        }
+        document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.menu').classList.remove('show');
+        });
+        });
+  </script>
+</body>
+</html>

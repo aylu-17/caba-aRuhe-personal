@@ -1,0 +1,134 @@
+body, header, main {
+  margin: 0;
+  padding: 0;
+  background-color: #dad1d1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu a {
+  text-decoration: none;
+  padding: 12px 20px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(93, 55, 55);
+  border-radius: 12px;
+  font-size: 14px;
+  display: inline-block;  
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu a:hover {
+  transform: scale(1.1);
+  background-color: rgba(156, 82, 82, 0.46);
+  color: #000000;
+  border-color: #ab2a2a;  
+}
+
+.principal {
+  margin: 0 ;
+  padding: 0px 40px;
+  max-width: 1300px;
+}
+.principal p {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.fotos_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  font-size: 20px;
+  color: #1b2f7c;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fotos_info div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 180px;
+}
+
+.fotos_info img {
+  width: 55px;
+}
+.fotos_servi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px 30px;
+  padding: 20px 30px;
+  max-width: 1150px;
+  font-size: 20px;
+  color: #1b2f7c;
+  justify-content: space-between;
+}
+
+.item-servicio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-servicio img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: grayscale(10%);
+}
+.hamburguesa {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: row; 
+    flex-wrap: wrap;   
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .menu.show {
+    display: flex;
+  }
+  .hamburguesa {
+    display: block;
+  }
+}
+

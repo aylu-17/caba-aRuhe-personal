@@ -1,0 +1,129 @@
+/* Reset y fuente */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Imagen de fondo en header */
+.imagen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../public/cabaña-exterior.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Capa oscura */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* Barra superior */
+.barra-superior {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 20px;
+  color: white;
+  gap: 10px;
+}
+
+/* Menú de navegación */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 12px 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 12px;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu a:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: #a30000;
+  border-color: #000000;
+}
+
+/* Texto central */
+.principal {
+  position: absolute;
+  top: 50%;         
+  left: 50%;    
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.principal p {
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 60px;
+  margin: 0;
+}
+
+.principal h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Botón hamburguesa (invisible por defecto) */
+.hamburguesa {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: row; 
+    flex-wrap: wrap;    
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+}

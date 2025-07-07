@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="/styles/reserva.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+                <a href="../index.html">
+                <img src="../public/logo.png" alt="Logo" width="50"></a>
+                <span>Ruhe</span>
+            </div>
+            <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+            <ul class="menu">
+                <li><a href="../index.html">Volver</a></li>
+                <li><a href="../pages/cabañaruhe.html">Cabaña Ruhe</a></li>
+                <li><a href="#">Ubicación</a></li>
+                <li><a href="#">Tarifa</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Administración Ruhe</a></li>
+            </ul>
+        </nav>
+    </header>
+     <main>
+        <div class="principal">
+            <h1>Reserva</h1>
+            <p>1- Observá nuestra Disponibilidad en tiempo real para buscar tus fechas </p>
+            <a href="https://docs.google.com/spreadsheets/d/1MUqiO91EDBSlGC7PbFJp9QuaZzq5MuJEUGutpLZv5Wo/edit?
+            usp=sharing">Disponibilidad</a>
+            <p>2- Observá nuestras tarifas de las fechas deseadas </p>
+            <a href="">Tarifas</a>
+            <p>3- Escribinos con la siguiente información a nuestro contacto </p>
+            <ul>
+                <li>Huespedes (Si hay menores)</li>
+                <li>Fechas de ingreso</li>
+                <li>Fechas de egreso</li>
+                <li>Cantidad de noches</li>
+            </ul>
+            <a href="" >Reserva</a>
+            <p>4- Para confirmar tu reserva, te pediremos una seña de 35% aproximadamente del total de la estadia. Una vez estemos en contacto y quieras confirmar te compartiremos los datos bancarios para concretar la reserva.</p>
+            <p>5- ¡Todo listo! Una vez recibido te compartiremos un comprobante con toda la información.</p>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+            document.querySelector('.menu').classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
