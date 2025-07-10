@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación</title>
+    <link rel="stylesheet" href="../styles/ubicacion.css">
+</head>
+<body>
+    <header>
+    <nav class="barra-superior">
+      <div class="logo">
+        <a href="../index.html"><img src="../public/logo.png" alt="Logo" width="50" /></a>
+        <span>Ruhe</span>
+      </div>
+      <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+      <ul class="menu">
+        <li><a href="../index.html">Volver</a></li>
+        <li><a href="../pages/reserva.html">Reserva</a></li>
+        <li><a href="../pages/cabañaruhe.html">Cabaña Ruhe</a></li>
+        <li><a href="#">Tarifa</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Administración Ruhe</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="principal">
+      <h1>Ubicación</h1>
+      <p>
+        Estamos en un sector donde podemos ofrecer tranquilidad, zona familiar y alejada
+        del centro, pero con todas las comodidades en la zona.
+      </p>
+    </div>
+
+    <div class="principal-botones">
+      <a href="https://maps.app.goo.gl/sUKG9SiSebb8aG6z8" target="_blank">Ubicación</a>
+    </div>
+
+    <div class="principal">
+      <p><strong>A 10km del centro de la ciudad o 15 minutos aproximadamente.</strong></p>
+    </div>
+
+    <div class="imagenes-ubicacion">
+      <img src="../public/ubi1.png" alt="paisaje de un arbol">
+      <img src="../public/ubi2.png" alt="paisaje de la montaña nevada" class="img-destacada">
+      <img src="../public/ubi3.png" alt="una bandurria">
+    </div>
+  </main>
+  <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+            document.querySelector('.menu').classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabaña Ruhe </title>
-    <link rel="stylesheet" href="../styles/cabañaruhe.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cabaña Ruhe</title>
+  <link rel="stylesheet" href="../styles/cabañaruhe.css" />
 </head>
 <body>
-    <header>
-        <nav class="barra-superior">
-            <div class="logo">
-                <a href="../index.html">
-                <img src="../public/logo.png" alt="Logo" width="50"></a>
-                <span>Ruhe</span>
-            </div>
-            <button class="hamburguesa" onclick="toggleMenu()">☰</button>
-            <ul class="menu">
-                <li><a href="../index.html">Volver</a></li>
-                <li><a href="../pages/reserva.html">Reserva</a></li>
-                <li><a href="#">Ubicación</a></li>
-                <li><a href="#">Tarifa</a></li>
-                <li><a href="#">Términos y condiciones</a></li>
-                <li><a href="#">Administración Ruhe</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>  
-        <div class="principal">
-            <h1>Cabaña Ruhe</h1>
+  <header>
+    <nav class="barra-superior">
+      <div class="logo">
+        <a href="../index.html"><img src="../public/logo.png" alt="Logo" width="50" /></a>
+        <span>Ruhe</span>
+      </div>
+      <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+      <ul class="menu">
+        <li><a href="../index.html">Volver</a></li>
+        <li><a href="../pages/reserva.html">Reserva</a></li>
+        <li><a href="../pages/ubicacion.html">Ubicación</a></li>
+        <li><a href="#">Tarifa</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Administración Ruhe</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="principal">
+       <h1>Cabaña Ruhe</h1>
             <p>Disfrutá de la calidez de la cabaña Ruhe y todas sus comodidades en cualquier epoca del año. Cabaña gran capacidad y
                 recomendada por su comodidad. Un hospedaje completo hogareño con un tono familiar, donde la tranquilidad y relax es la
                 vista de los Cordones del Chapelco y nuestro jardín ⛰🏔🌳
@@ -68,17 +67,78 @@
                 <div class="item-servicio"><img src="../public/humidificador.png" alt=""><span>Humidificador</span></div>
             </section>
         </div>
-    </main>
-    <script>
-        function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('show');
-        }
-        document.querySelectorAll('.menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.querySelector('.menu').classList.remove('show');
-        });
-        });
+    </div>
+    <div class="principal-botones">
+      <a href="../pages/reserva.html">¡Reserva!</a>
+      <a href="https://docs.google.com/spreadsheets/d/1MUqiO91EDBSlGC7PbFJp9QuaZzq5MuJEUGutpLZv5Wo/edit?usp=sharing" target="_blank">Disponibilidad</a>
+    </div>
+    <h3 class="titulo-fotos">Fotos</h3>
+    <div class="fotos_cabaña"> 
+      <div class="slides-container">
+          <img src="../public/fotos.jpg" class="slide active" alt="Imagen 1">
+          <img src="../public/fotos1.jpg" class="slide" alt="Imagen 2">
+          <img src="../public/fotos2.jpg" class="slide" alt="Imagen 3">
+          <img src="../public/fotos3.jpg" class="slide" alt="Imagen 4">
+          <img src="../public/fotos4.jpg" class="slide" alt="Imagen 5">
+          <img src="../public/fotos5.jpg" class="slide" alt="Imagen 6">
+          <img src="../public/fotos6.jpg" class="slide" alt="Imagen 7">
+          <img src="../public/fotos7.jpg" class="slide" alt="Imagen 8">
+      </div>
+      <div class="indicadores">
+        <span class="punto active" data-index="0"></span>
+        <span class="punto" data-index="1"></span>
+        <span class="punto" data-index="2"></span>
+        <span class="punto" data-index="3"></span>
+        <span class="punto" data-index="4"></span>
+        <span class="punto" data-index="5"></span>
+        <span class="punto" data-index="6"></span>
+        <span class="punto" data-index="7"></span>
+      </div>
+    </div>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('show');
+    }
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.menu').classList.remove('show');
+      });
+    });
+  </script>
+
+  <script>
+    let indiceActual = 0;
+    const slides = document.querySelectorAll(".slide");
+    const puntos = document.querySelectorAll(".punto");
+
+    function mostrarSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+        puntos[i].classList.toggle("active", i === index);
+      });
+      indiceActual = index;
+    }
+
+    function siguienteSlide() {
+      const siguiente = (indiceActual + 1) % slides.length;
+      mostrarSlide(siguiente);
+    }
+
+    // Slider automático
+    setInterval(siguienteSlide, 3000);
+
+    // Click en los puntos
+    puntos.forEach(punto => {
+      punto.addEventListener("click", () => {
+        const index = parseInt(punto.dataset.index);
+        mostrarSlide(index);
+      });
+    });
   </script>
 </body>
 </html>
