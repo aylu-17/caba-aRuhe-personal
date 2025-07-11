@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/tarifa.css">
+    <title>Tarifas</title>
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+        <div class="logo">
+            <a href="../index.html"><img src="../public/logo.png" alt="Logo" width="50" /></a>
+            <span>Ruhe</span>
+        </div>
+        <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+        <ul class="menu">
+            <li><a href="../index.html">Volver</a></li>
+            <li><a href="../pages/reserva.html">Reserva</a></li>
+            <li><a href="../pages/cabañaruhe.html">Cabaña Ruhe</a></li>
+            <li><a href="../pages/ubicacion.html">Ubicación</a></li>
+            <li><a href="../pages/terminosycondiciones.html">Términos y condiciones</a></li>
+            <li><a href="../pages/administracionruhe.html">Administración Ruhe</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <section class="tarifas">
+           <h2>TARIFAS</h2> 
+            <p class="subtitulo">TARIFAS FLEXIBLES POR CANTIDAD DE HUESPEDES</p>
+
+            <div class="tarifas-contenedor">
+                <div class="tarifa-estacion otoño">
+                <h3>OTOÑO</h3>
+                <p>Tarifa Por Noche</p>
+                <ul>
+                    <li><span>2 Personas </span><span>50.000$</span></li>
+                    <li><span>3 Personas </span><span>55.000$</span></li>
+                    <li><span>4 Personas </span><span>60.000$</span></li>
+                    <li><span>5 Personas </span><span>65.000$</span></li>
+                    <li><span>6 Personas </span><span>68.000$</span></li>
+                </ul>
+                </div>
+
+                <div class="tarifa-estacion invierno">
+                <h3>INVIERNO</h3>
+                <p>Tarifa Por Noche</p>
+                <ul>
+                    <li><span>2 Personas </span><span>90.000$</span></li>
+                    <li><span>3 Personas </span><span>92.000$</span></li>
+                    <li><span>4 Personas </span><span>95.000$</span></li>
+                    <li><span>5 Personas </span><span>98.000$</span></li>
+                    <li><span>6 Personas </span><span>100.000$</span></li>
+                </ul>
+                </div>
+            </div>
+            <p class="nota">*TARIFA ESPECIAL CON 7 NOCHES O MÁS DE HOSPEDAJE</p>
+        </section>
+    </main>
+    <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('show');
+    }
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.menu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>

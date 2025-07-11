@@ -1,11 +1,11 @@
+/* dody */
 body, header, main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
+/* header , menu */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -13,16 +13,12 @@ body, header, main {
   padding: 10px 20px;
   gap: 15px;
 }
-
-
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 0;
 }
-
-
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -38,17 +34,16 @@ body, header, main {
   border: 1px solid rgb(93, 55, 55);
   border-radius: 12px;
   font-size: 14px;
-  display: inline-block;  
+  display: inline-block;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-
 .menu a:hover {
   transform: scale(1.1);
   background-color: rgba(156, 82, 82, 0.46);
   color: #000000;
-  border-color: #ab2a2a;  
+  border-color: #ab2a2a;
 }
-
+/* texto principal  */
 .principal {
   margin: 0 ;
   padding: 0px 40px;
@@ -60,7 +55,7 @@ body, header, main {
   line-height: 1.6;
   font-size: 20px;
 }
-
+/* fotos del texto informacion  */
 .fotos_info {
   display: flex;
   flex-wrap: wrap;
@@ -82,6 +77,7 @@ body, header, main {
 .fotos_info img {
   width: 55px;
 }
+/* fotos del texto del servicio  */
 .fotos_servi {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -104,15 +100,15 @@ body, header, main {
   height: 45px;
   object-fit: contain;
 }
+/* botones */
 .principal-botones {
   display: flex;
   flex-direction: column;
-  align-items: center;    
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
   gap: 10px;
 }
-
 .principal-botones a {
   text-decoration: none;
   display: inline-block;
@@ -133,7 +129,7 @@ body, header, main {
   color: rgb(4, 0, 0);
   border-color: #4c5aa6d1
 }
-
+/* titulo de las fotos */
 .titulo-fotos {
   font-size: 28px;
   font-weight: bold;
@@ -142,6 +138,7 @@ body, header, main {
   color: #222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* fotos de la cabaña */
 .fotos_cabaña {
   max-width: 500px;
   margin: 30px auto;
@@ -167,24 +164,24 @@ body, header, main {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
+/* cuadro exterior */
 .slides {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3; 
+  aspect-ratio: 4 / 3;
 }
-
+/* color del cuadro y posicionn de imagen */
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain;
   border-radius: 12px;
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.6s ease, transform 0.6s ease;
   pointer-events: none;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .slide.active {
@@ -193,7 +190,7 @@ body, header, main {
   pointer-events: auto;
   position: relative;
 }
-
+/* puntos de abajo */
 .indicadores {
   margin-top: 15px;
   text-align: center;
@@ -217,7 +214,7 @@ body, header, main {
 .punto.active {
   background-color: #333;
 }
-
+/* boton de menu */
 .hamburguesa {
   display: none;
   background: none;
@@ -226,6 +223,7 @@ body, header, main {
   cursor: pointer;
   color: #333;
 }
+/*  responsive para el celu */
 @media (max-width: 768px) {
   .fotos_cabaña {
     max-width: 100%;
@@ -236,7 +234,7 @@ body, header, main {
   }
   .menu {
     display: none;
-    flex-direction: row;   
+    flex-direction: row;
     gap: 10px;
     justify-content: center;
     width: 100%;

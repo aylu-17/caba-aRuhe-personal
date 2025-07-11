@@ -1,0 +1,54 @@
+body, header, main {
+  margin: 0;
+  padding: 0;
+  background-color: #dad1d1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* header , menu */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 15px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu a {
+  text-decoration: none;
+  padding: 12px 20px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(93, 55, 55);
+  border-radius: 12px;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.menu a:hover {
+  transform: scale(1.1);
+  background-color: rgba(156, 82, 82, 0.46);
+  color: #000000;
+  border-color: #ab2a2a;
+}
+/* menu boton */
+.hamburguesa {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  z-index: 3;
+}

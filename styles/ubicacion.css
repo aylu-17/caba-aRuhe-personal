@@ -1,9 +1,11 @@
+/* body  */
 body, header, main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* menu barra  */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -51,6 +53,7 @@ body, header, main {
   cursor: pointer;
   z-index: 3;
 }
+/* texto principal */
 .principal {
   margin: 0 ;
   padding: 0px 40px;
@@ -62,6 +65,7 @@ body, header, main {
   line-height: 1.6;
   font-size: 21px;
 }
+/* boton */
 .principal-botones {
   display: flex;
   flex-direction: column;
@@ -91,8 +95,7 @@ body, header, main {
   color: rgb(4, 0, 0);
   border-color: #4c5aa6d1
 }
-
-
+/* imagenes */
 .imagenes-ubicacion {
   display: flex;
   flex-wrap: wrap;
@@ -113,7 +116,7 @@ body, header, main {
 .imagenes-ubicacion img:hover {
   transform: scale(1.03);
 }
-
+/* responsive para el celu */
 @media (max-width: 768px) {
   .menu {
     display: none;

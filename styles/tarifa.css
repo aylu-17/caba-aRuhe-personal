@@ -1,0 +1,148 @@
+/* dody */
+body, header, main {
+  margin: 0;
+  padding: 0;
+  background-color: #dad1d1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* header , menu */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 15px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu a {
+  text-decoration: none;
+  padding: 12px 20px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(93, 55, 55);
+  border-radius: 12px;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.menu a:hover {
+  transform: scale(1.1);
+  background-color: rgba(156, 82, 82, 0.46);
+  color: #000000;
+  border-color: #ab2a2a;
+}
+/* menu boton */
+.hamburguesa {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.tarifas {
+  padding: 10px 40px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tarifas h2 {
+  text-align: left;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.tarifas-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tarifa-estacion {
+  flex: 1 1 300px;
+  max-width: 500px;
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.7);
+}
+
+.otoño {
+  background-image: url('../public/otoño_foto.jpg'); /* usá la imagen real */
+}
+
+.invierno {
+  background-image: url('../public/invierno_foto.jpg'); /* usá la imagen real */
+}
+
+.tarifa-estacion h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.tarifa-estacion p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.tarifa-estacion ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tarifa-estacion li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nota {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: row; 
+    flex-wrap: wrap;    
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+}

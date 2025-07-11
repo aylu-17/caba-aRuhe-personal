@@ -96,8 +96,7 @@ body, html {
   margin: 0;
   font-size: 24px;
 }
-
-/* Botón hamburguesa (invisible por defecto) */
+/* menu boton */
 .hamburguesa {
   display: none;
   font-size: 26px;
@@ -107,7 +106,7 @@ body, html {
   cursor: pointer;
   z-index: 3;
 }
-
+/* responsive para el celu  */
 @media (max-width: 768px) {
   .menu {
     display: none;

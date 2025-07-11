@@ -91,7 +91,7 @@ body, header, main {
   font-size: 26px;
   background: none;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   z-index: 3;
 }
