@@ -42,7 +42,7 @@ body, header, main {
   color: #000000;
   border-color: #ab2a2a;
 }
-/* menu boton */
+
 .hamburguesa {
   display: none;
   font-size: 26px;
@@ -51,4 +51,48 @@ body, header, main {
   color: rgb(0, 0, 0);
   cursor: pointer;
   z-index: 3;
+}
+.principal {
+  margin: 0 ;
+  padding: 0px 40px;
+  max-width: 100%;
+}
+.principal h1 {
+  font-family: 'Georgia', serif;
+  font-size: 36px;
+  color: #1f1f1f;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.principal h2 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.principal p {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: row;   
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
 }
