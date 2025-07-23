@@ -1,33 +1,34 @@
-/* Reset y fuente */
+/* === RESET & BASE === */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  background-color: rgb(78, 64, 64);
+  color: #ffffff;
 }
 
-/* Imagen de fondo en header */
+/* === HEADER: Imagen de fondo principal === */
 .imagen {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background: url('../public/cabaña-exterior.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Capa oscura */
+/* Capa oscura sobre la imagen */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.6);
   z-index: 1;
 }
 
-/* Barra superior */
+/* === BARRA SUPERIOR (Logo + Menú) === */
 .barra-superior {
   position: relative;
   z-index: 2;
@@ -39,15 +40,15 @@ body, html {
 }
 
 .logo {
+  font-family: 'Lovers Quarrel', cursive;
   display: flex;
   align-items: center;
-  font-family: 'Lovers Quarrel', cursive;
   font-size: 20px;
   color: white;
   gap: 10px;
 }
 
-/* Menú de navegación */
+/* === MENÚ DE NAVEGACIÓN === */
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -58,13 +59,13 @@ body, html {
 }
 
 .menu a {
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   padding: 12px 20px;
-  color: white;
+  color: #ffffff;
   border: 1px solid white;
   border-radius: 12px;
-  font-size: 14px;
-  display: inline-block;
+  font-size: 15px;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -75,28 +76,7 @@ body, html {
   border-color: #000000;
 }
 
-/* Texto central */
-.principal {
-  position: absolute;
-  top: 50%;         
-  left: 50%;    
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
-  color: white;
-}
-
-.principal p {
-  font-family: 'Lovers Quarrel', cursive;
-  font-size: 60px;
-  margin: 0;
-}
-
-.principal h2 {
-  margin: 0;
-  font-size: 24px;
-}
-/* menu boton */
+/* Botón hamburguesa (solo visible en móviles) */
 .hamburguesa {
   display: none;
   font-size: 26px;
@@ -106,12 +86,236 @@ body, html {
   cursor: pointer;
   z-index: 3;
 }
-/* responsive para el celu  */
+
+/* === TEXTO CENTRAL ENCIMA DE LA IMAGEN === */
+.header {
+  position: absolute;
+  top: 50%;         
+  left: 50%;    
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center; 
+}
+
+.header h1 {
+  font-family: "Cinzel";
+  font-size: 70px;
+  margin: 0;
+  font-weight: normal;
+  color: #d9bf79;
+}
+
+.header h2 {
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 30px;
+  margin: 0;
+  font-weight: normal;
+  color: #d9bf79;
+}
+
+/* === SECCIÓN PRINCIPAL (Texto + Video o Imagen) === */
+.principal {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.text-box {
+  max-width: 400px;
+}
+
+.text-box h3 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #cccccc;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.text-box h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: #ffffff;
+}
+
+.text-box p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+/* Botón general reutilizable */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+/* === VIDEOS E IMÁGENES === */
+.video-box {
+  position: relative;
+  width: 220px;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-box video {
+  width: 100%;
+  display: block;
+}
+
+.fireplace {
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+/* === CARRUSEL DE IMÁGENES === */
+.carousel-container {
+  position: relative;
+  width: 490px;
+  height: 400px;
+  margin: 40px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.left-arrow { left: 10px; }
+.right-arrow { right: 10px; }
+
+/* === UBICACIÓN: Mapa + Texto === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.ubi-carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 320px;  
+  margin: 40px auto;
+  max-width: 1200px;
+  flex-wrap: nowrap;
+}
+
+.map-container {
+  flex-shrink: 0;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.ubi {
+  max-width: 580px;
+  text-align: left;
+}
+
+.ubi h3 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #cccccc;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.ubi h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.ubi p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ubi a {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+/* === TARIFAS DE LA CABAÑA  */
+.tarifa {
+  max-width: 1000px;
+}
+
+.tarifa h3 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #cccccc;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.tarifa h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: #ffffff;
+}
+
+.tarifa p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+/* === MEDIA QUERY (para móviles) === */
 @media (max-width: 768px) {
+
+  /* Menú colapsable */
   .menu {
     display: none;
-    flex-direction: row; 
-    flex-wrap: wrap;    
+    flex-direction: row;
     gap: 10px;
     justify-content: center;
     width: 100%;
@@ -125,4 +329,79 @@ body, html {
   .hamburguesa {
     display: block;
   }
+
+  /* Carrusel */
+  .carousel-container {
+    width: 95%;
+    height: 280px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  }
+
+  .carousel-slide img {
+    border-radius: 15px;
+  }
+
+  .arrow {
+    font-size: 28px;
+    padding: 6px 10px;
+    background-color: rgba(0,0,0,0.35);
+  }
+
+  /* Video adaptado */
+  .video-box {
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    margin: 20px;
+  }
+
+  .video-box video {
+    border-radius: 5px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .ubi-carousel-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 0;
+    align-items: center;
+  }
+
+  .map-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+  }
+
+  .ubi {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .ubi h2,
+  .ubi h3,
+  .ubi p,
+  .ubi a {
+    text-align: center;
+  }
+
+  .tarifa {
+    max-width: 90%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .tarifa h1 {
+    font-size: 28px;
+  }
+
+  .tarifa p {
+    font-size: 16px;
+  }
+
 }

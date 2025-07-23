@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cabaña Ruhe</title>
   <link rel="stylesheet" href="./styles/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="imagen">
@@ -24,13 +29,64 @@
         <li><a href="./pages/administracionruhe.html">Administración Ruhe</a></li>
       </ul>
     </nav>
-    <div class="principal">
-      <p>Cabaña Ruhe</p>
+    <div class="header">
+      <h1>Cabaña Ruhe</h1>
       <h2>San Martín de los Andes</h2>
     </div>
   </header>
   <main>
-    <h1>hola</h1>
+    <div class="principal">
+      <div class="text-box">
+        <h3>--- Estadía en San Martín de los Andes</h3>
+        <h1>Bienvenidos a Cabaña Ruhe</h1>
+        <p>
+          Bienvenido a Ruhe, un hospedaje ubicado en el corazón de la naturaleza patagónica, San Martín de los Andes. Cabaña Ruhe es un refugio cálido y acogedor pensado para quienes buscan descanso, tranquilidad y entorno familiar, con todo lo necesario para tu estancia. A 10km del centro de San Martín de los Andes y con vista a la montaña, te invitamos a disfrutar una estadía confortable, con el encanto de lo simple y lo natural.”        </p>
+        <a href="./pages/cabañaruhe.html" class="btn">Conocer Más</a>
+      </div>
+      <div class="video-box">
+        <video controls poster="poster-hotel.jpg">
+          <source src="./public/CABAÑA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel-slide" id="slide">
+          <img src="./public/paisaje1.jpg" alt="Cabaña Ruhe 1">
+          <img src="./public/paisaje2.jpg" alt="Cabaña Ruhe 2">
+          <img src="./public/paisaje3.jpg" alt="Cabaña Ruhe 3">
+          <img src="./public/paisaje4.jpg" alt="Cabaña Ruhe 4">
+        </div>
+        <div class="arrow left-arrow" onclick="prevSlide()">‹</div>
+        <div class="arrow right-arrow" onclick="nextSlide()">›</div>
+      </div>
+      <div class="container">
+        <div class="ubi-carousel-wrapper">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.6244290322425!2d-71.242662!3d-40.1283725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110bac7c5466ed%3A0xf1a591f0734560a0!2sCaba%C3%B1a%20RUHE!5e0!3m2!1ses-419!2sar!4v1753282987614!5m2!1ses-419!2sar"
+            width="600" 
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="ubi">
+            <h3>--- Ubicación</h3>
+            <h2>San Martín de los Andes</h2>
+            <p>
+              Nuestra cabaña se encuentra rodeada de naturaleza y tranquilidad,a pocos minutos del centro 
+              y con acceso a senderos con paisajes únicos.
+            </p>
+            <a href="./pages/ubicacion.html" class="btn">Ubicación</a>
+          </div>
+        </div>
+        <div class="tarifa">
+        <h3>--- Tarifas de la cabaña</h3>
+        <h1>Tarifas de Cabaña Ruhe</h1>
+        <p>En Cabaña RUHE contamos con precios accesibles todo el año, con tarifas diferenciadas para temporada alta y baja. Tarifas  especiales para estadías prolongadas de 7 noches o mas  de hospedaje .</p>
+        <a href="./pages/tarifa.html" class="btn">Tarifas</a>
+      </div>
+      </div>
   </main>
   <script>
     function toggleMenu() {
@@ -43,5 +99,27 @@
       });
     });
   </script>
-</body>
+  <script>
+    let currentIndex = 0;
+    const slide = document.getElementById('slide');
+    const images = slide.querySelectorAll('img');
+    const totalSlides = images.length;
+
+    function updateSlide() {
+      slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    setInterval(nextSlide, 5000); // Cambio automático
+  </script>
+  </body>
 </html>
