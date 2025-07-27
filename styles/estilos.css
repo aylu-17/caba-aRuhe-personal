@@ -480,139 +480,159 @@ body, html {
 
 /* === MEDIA QUERY (para móviles) === */
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction:row;
-    gap: 15px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .menu.show {
-    display: flex;
-  }
-  .menu a {
-    padding: 10px;
-    border-radius: 8px;
-    display: block;
-    text-align: center;
-  }
-  .hamburguesa {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-  }
-
-  /* Carrusel */
-  .carousel-container {
-    width: 95%;
-    height: 280px;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.4);
-  }
-
-  .carousel-slide img {
-    border-radius: 15px;
-  }
-
-  .arrow {
-    font-size: 28px;
-    padding: 6px 10px;
-    background-color: rgba(0,0,0,0.35);
-  }
-
-  /* Video adaptado */
-  .video-box {
-    width: 100%;
-    height: 350px;
-    border-radius: 15px;
-    margin: 20px;
-  }
-
-  .video-box video {
-    border-radius: 5px;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  .ubi-carousel-wrapper {
-    flex-direction: column;
-    gap: 30px;
-    margin: 30px 0;
-    align-items: center;
-  }
-
-  .map-container {
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-  }
-
-  .ubi {
-    max-width: 80%;
-    text-align: center;
-  }
-
-  .ubi h2,
-  .ubi h3,
-  .ubi p,
-  .ubi a {
-    text-align: center;
-  }
-
-  .tarifa {
-    max-width: 90%;
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  .tarifa h1 {
-    font-size: 28px;
-  }
-
-  .tarifa p {
-    font-size: 16px;
-  }
-  .terminosycondiciones {
-    max-width: 90%;
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .terminosycondiciones h3 {
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
-  
-  .terminosycondiciones h1 {
-    font-size: 22px;
-  }
-  
-  .terminosycondiciones p {
-    font-size: 16px;
-  }
-  
-  .terminosycondiciones a {
-    padding: 12px 25px;
-    font-size: 16px;
-  }
-  /* turismo */
-  .slide {
-    flex: 0 0 250px;
-  }
-  .slider-track {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .comentario-card {
-    width: 34%;
-  }
+/* MENU HAMBURGUESA */
+.menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 15px;
 }
 
+.menu.show {
+  display: flex;
+}
+
+.menu a {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff11;
+  border-radius: 8px;
+}
+
+.hamburguesa {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* CARRUSEL */
+.carousel-container {
+  width: 95%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.arrow {
+  font-size: 24px;
+  padding: 6px 10px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* VIDEO */
+.video-box {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.video-box video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+/* UBICACIÓN */
+.ubi-carousel-wrapper {
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 340px;
+  height: 320px;
+  border-radius: 20px;
+}
+
+.ubi {
+  max-width: 90%;
+  text-align: center;
+}
+
+.ubi h2,
+.ubi h3,
+.ubi p,
+.ubi a {
+  text-align: center;
+}
+
+/* TARIFA */
+.tarifa {
+  max-width: 95%;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.tarifa h1 {
+  font-size: 24px;
+}
+
+.tarifa p {
+  font-size: 15px;
+}
+
+/* TÉRMINOS Y CONDICIONES */
+.terminosycondiciones {
+  max-width: 95%;
+  text-align: center;
+  padding: 15px;
+}
+
+.terminosycondiciones h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.terminosycondiciones h1 {
+  font-size: 20px;
+}
+
+.terminosycondiciones p {
+  font-size: 15px;
+}
+
+.terminosycondiciones a {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+/* SECCIÓN TURISMO */
+.slide {
+  flex: 0 0 240px;
+}
+
+.slider-track {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* COMENTARIOS */
+.comentario-card {
+  width: 90%;
+  max-width: 320px;
+}
+}
