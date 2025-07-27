@@ -480,16 +480,16 @@ body, html {
 
 /* === MEDIA QUERY (para móviles) === */
 @media (max-width: 768px) {
-/* MENU HAMBURGUESA */
-.menu {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin-top: 15px;
-}
 
+  /* MENU HAMBURGUESA */
+  .menu {
+    display: none;
+    flex-direction:row;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
 .menu.show {
   display: flex;
 }
@@ -636,3 +636,4 @@ body, html {
   max-width: 320px;
 }
 }
+
