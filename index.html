@@ -14,7 +14,7 @@
 <body>
   <header class="imagen">
     <div class="overlay"></div>
-        <nav class="barra-superior">
+    <nav class="barra-superior">
       <div class="logo">
         <img src="./public/logo.png" alt="Logo" width="50">
         <span>Ruhe</span>
@@ -36,19 +36,20 @@
   </header>
   <main>
     <div class="principal">
-      <div class="text-box">
+      <div class="text-box slide-up">
         <h3>--- Estadía en San Martín de los Andes</h3>
         <h1>Bienvenidos a Cabaña Ruhe</h1>
         <p>
-          Bienvenido a Ruhe, un hospedaje ubicado en el corazón de la naturaleza patagónica, San Martín de los Andes. Cabaña Ruhe es un refugio cálido y acogedor pensado para quienes buscan descanso, tranquilidad y entorno familiar, con todo lo necesario para tu estancia. A 10km del centro de San Martín de los Andes y con vista a la montaña, te invitamos a disfrutar una estadía confortable, con el encanto de lo simple y lo natural.”        </p>
+          Bienvenido a Ruhe, un hospedaje ubicado en el corazón de la naturaleza patagónica, San Martín de los Andes. Cabaña Ruhe es un refugio cálido y acogedor pensado para quienes buscan descanso, tranquilidad y entorno familiar, con todo lo necesario para tu estancia. A 10km del centro de San Martín de los Andes y con vista a la montaña, te invitamos a disfrutar una estadía confortable, con el encanto de lo simple y lo natural.
+        </p>
         <a href="./pages/cabañaruhe.html" class="btn">Conocer Más</a>
       </div>
-      <div class="video-box">
+      <div class="video-box fade-in">
         <video controls poster="poster-hotel.jpg">
           <source src="./public/CABAÑA.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="carousel-container">
+      <div class="carousel-container fade-in">
         <div class="carousel-slide" id="slide">
           <img src="./public/paisaje1.jpg" alt="Cabaña Ruhe 1">
           <img src="./public/paisaje2.jpg" alt="Cabaña Ruhe 2">
@@ -60,66 +61,95 @@
       </div>
       <div class="container">
         <div class="ubi-carousel-wrapper">
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.6244290322425!2d-71.242662!3d-40.1283725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110bac7c5466ed%3A0xf1a591f0734560a0!2sCaba%C3%B1a%20RUHE!5e0!3m2!1ses-419!2sar!4v1753282987614!5m2!1ses-419!2sar"
-            width="600" 
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+          <div class="map-container fade-in">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.6244290322425!2d-71.242662!3d-40.1283725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110bac7c5466ed%3A0xf1a591f0734560a0!2sCaba%C3%B1a%20RUHE!5e0!3m2!1ses-419!2sar!4v1753282987614!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="ubi">
+          <div class="ubi slide-up">
             <h3>--- Ubicación</h3>
             <h2>San Martín de los Andes</h2>
             <p>
-              Nuestra cabaña se encuentra rodeada de naturaleza y tranquilidad,a pocos minutos del centro 
-              y con acceso a senderos con paisajes únicos.
+              Nuestra cabaña se encuentra rodeada de naturaleza y tranquilidad, a pocos minutos del centro y con acceso a senderos con paisajes únicos.
             </p>
             <a href="./pages/ubicacion.html" class="btn">Ubicación</a>
           </div>
         </div>
-        <div class="tarifa">
-        <h3>--- Tarifas de la cabaña</h3>
-        <h1>Tarifas de Cabaña Ruhe</h1>
-        <p>En Cabaña RUHE contamos con precios accesibles todo el año, con tarifas diferenciadas para temporada alta y baja. Tarifas  especiales para estadías prolongadas de 7 noches o mas  de hospedaje .</p>
-        <a href="./pages/tarifa.html" class="btn">Tarifas</a>
+        <div class="tarifa slide-up">
+          <h3>--- Tarifas de la cabaña</h3>
+          <h1>Tarifas de Cabaña Ruhe</h1>
+          <p>En Cabaña RUHE contamos con precios accesibles todo el año, con tarifas diferenciadas para temporada alta y baja. Tarifas especiales para estadías prolongadas de 7 noches o más de hospedaje.</p>
+          <a href="./pages/tarifa.html" class="btn">Tarifas</a>
+        </div>
+         <div class="terminosycondiciones slide-up">
+          <h3>--- Terminos y condiciones de la cabaña</h3>
+          <h1>Termino y condiciones de Cabaña Ruhe</h1>
+          <p>Al hospedarse en Cabaña Ruhe, usted acepta nuestras normas y condiciones para garantizar una estadía segura y agradable, Mire nuestros terminos y condiciones</p>
+          <a href="./pages/terminosycondiciones.html" class="btn">Terminos y condiciones</a>
+        </div>
       </div>
-      </div>
+     <section class="turismo-sma">
+        <h2 class="titulo-seccion">Lugares turísticos en SMA</h2>
+        <div class="slider-auto" id="slider-auto">
+          <div class="slide">
+            <img src="./public/mirador-arrayan.jpg" alt="Mirador Arrayanes">
+            <h3>Mirador Arrayanes</h3>
+            <p> Caminata corta desde el centro hasta un mirador con vistas al Lago Lácar y las montañas. Ideal para una salida rápida, con bancos y un cartel explicativo.</p>
+            <a href="https://maps.app.goo.gl/TkJEmRkzKHMKABr68">Ubicación</a>
+          </div>
+          <div class="slide">
+            <img src="./public/playacatritre.jpg" alt="Playa Catritre">
+            <h3>Playa Catritre</h3>
+            <p>Una de las playas más tranquilas del lago Lácar, con sombra de árboles, agua cristalina y espacio para picnic.</p>
+            <a href="https://maps.app.goo.gl/wTwoUW6yPUTogXuXA">Ubicación</a>
+          </div>
+          <div class="slide">
+            <img src="./public/costanera.jpg" alt="Lago Lácar">
+            <h3> Costanera del Lago Lácar</h3>
+            <p>Paseo ideal para caminar al atardecer o descansar en los bancos frente al lago. Muy seguro y con buena iluminación.</p>
+            <a href="https://maps.app.goo.gl/k5MuTko67JEhrsAs8">Ubicación</a>
+          </div>
+          <div class="slide">
+            <img src="./public/chapelco.jpeg" alt="Cerro Chapelco">
+            <h3>Cerro Chapelco</h3>
+            <p>Centro de esquí y trekking con vistas espectaculares. Ideal para deportes de invierno o caminatas en verano.</p>
+            <a href="https://maps.app.goo.gl/FnxZzBSJCSpqHUaa8">Ubicación</a>
+        </div>
+        <div class="slide">
+          <img src="./public/sendero_laguna_rosales.jpg" alt="Laguna Rosales">
+          <h3>Sendero de Laguna Rosales</h3>
+          <p>Hermosa laguna ideal para un día de campo. Acceso por senderos desde el centro.</p>
+          <a href="https://maps.app.goo.gl/LuoVdmjYd3yFnW3H6">Ubicación</a>
+        </div>
+        <div class="slide">
+          <img src="./public/museo_primeros_pobladores.jpg" alt="Museo Primero Pobladores">
+          <h3>Museo Primeros Pobladores</h3>
+          <p>EL museo rescata la historia de los pueblos originarios y los primeros colonos de la ciudad. Cuenta con piezas arqueológicas, fotografías, objetos históricos y relatos fundacionales.
+            Horario: Miércoles a sábados de 14:00 a 18:00 hs.Entrada libre y gratuita.</p>
+          <a href="https://maps.app.goo.gl/cGKurkvya347VFDSA">Ubicación</a>
+        </div>
+        <div class="slide">
+          <img src="./public/museo.jpg" alt="Museo natural">
+          <h3>Museo de historia natural</h3>
+          <p>Museo dedicado a la paleontología y biodiversidad regional. Exhibe fósiles, réplicas de dinosaurios y fauna patagónica. Horario: Martes, viernes, sábados y domingos de 10 a 12 h y de 16 a 19 h
+              Entrada: Paga (aprox. $5.000), con descuentos para estudiantes y jubilados.</p>
+          <a href="https://maps.app.goo.gl/o3Je5VVteSo4XRnZ7">Ubicación</a>
+        </div>
+        <div class="slide">
+          <img src="./public/lolog.jpg" alt="lolog">
+          <h3>Lago lolog</h3>
+          <p>Es uno de los destinos favoritos de la región por sus playas de arena con aguas poco profundas y templadas en verano (como Playa Bonita y Playa La Herradura), ideales para familias y deportes como el kayak o la pesca de truchas (Con permiso).</p>
+          <a href="https://maps.app.goo.gl/dZtoLa7jopeEHhGq5">Ubicación</a>
+        </div>
+      </section>
+      <section class="comentarios-slider">
+        <h2>Algunas de nuestras Reseñas</h2>
+        <div class="slider-track" id="sliderTrack">
+          <div class="comentario-card">🌟 “Un lugar mágico para desconectar. Volveremos pronto.”<br><span>– Laura M.</span></div>
+          <div class="comentario-card">🏞️ “La playa de Lolog es perfecta para familias. Tranquilidad total.”<br><span>– Pablo G.</span></div>
+          <div class="comentario-card">🦕 “Nos encantó el museo, muy interesante y bien cuidado.”<br><span>– Marta y Diego</span></div>
+          <div class="comentario-card">⛰️ “San Martín tiene los mejores paisajes de la Patagonia.”<br><span>– Nicolás R.</span></div>
+        </div>
+      </section>
   </main>
-  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('show');
-    }
-    document.querySelectorAll('.menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.menu').classList.remove('show');
-      });
-    });
-  </script>
-  <script>
-    let currentIndex = 0;
-    const slide = document.getElementById('slide');
-    const images = slide.querySelectorAll('img');
-    const totalSlides = images.length;
-
-    function updateSlide() {
-      slide.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlide();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlide();
-    }
-
-    setInterval(nextSlide, 5000); // Cambio automático
-  </script>
-  </body>
+  <script src="./js/main.js"></script>
+</body>
 </html>

@@ -80,16 +80,22 @@ body, header, main {
   line-height: 1.6;
 }
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: row;   
-    gap: 10px;
+    .menu {
+     display: none;
+    flex-direction:row;
+    gap: 15px;
     justify-content: center;
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
   }
-
   .menu.show {
     display: flex;
+  }
+  .menu a {
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
   }
 
   .hamburguesa {
