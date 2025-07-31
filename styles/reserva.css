@@ -1,8 +1,14 @@
 body, header, main {
   margin: 0;
   padding: 0;
-  background-color: #e8ddd4;
+  background-color: #dad1d1;
 }
+@font-face {
+      font-family: 'Glacial Indifference';
+      src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
 
 .barra-superior {
@@ -15,6 +21,7 @@ body, header, main {
 
 
 .logo {
+  font-family: 'Lovers Quarrel', cursive;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -31,13 +38,14 @@ body, header, main {
   margin: 0;
 }
 .menu a {
-  font-family: 'Playfair Display';
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   padding: 12px 20px;
   color: rgb(0, 0, 0);
   border: 1px solid rgb(93, 55, 55);
   border-radius: 12px;
   font-size: 15px;
+  
   display: inline-block;  
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -63,28 +71,37 @@ body, header, main {
   border-color: rgb(0, 0, 0);
 }
 .principal a {
+  font-family: 'Arimo', sans-serif;
   text-decoration: none;
   display: inline-block;
-  padding: 14px 20px;
-  background-color:#386695ce;
+  padding: 18px 20px;
+  background-color:#2e5984;
   color: rgb(255, 255, 255);
   border-color: rgb(0, 0, 0);
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 20px;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+.principal h1 {
+  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .principal p {
+  font-family: 'Glacial Indifference', sans-serif;
   margin-top: 30px;
   margin-bottom: 30px;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .principal ul {
   margin: 10px 0 30px 20px;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .hamburguesa {

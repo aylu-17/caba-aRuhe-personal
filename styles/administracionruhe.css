@@ -2,7 +2,8 @@ body, header, main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Cinzel";
+
 }
 /* header , menu */
 .barra-superior {
@@ -13,6 +14,7 @@ body, header, main {
   gap: 15px;
 }
 .logo {
+  font-family: 'Lovers Quarrel', cursive;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -27,6 +29,7 @@ body, header, main {
   margin: 0;
 }
 .menu a {
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   padding: 12px 20px;
   color: rgb(0, 0, 0);

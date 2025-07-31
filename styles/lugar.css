@@ -1,7 +1,8 @@
 body, header, main {
   margin: 0;
   padding: 0;
-  background-color: #e8ddd4;
+  background-color: #dad1d1;
+  font-family: "Cinzel";
 }
 
 
@@ -15,6 +16,7 @@ body, header, main {
 
 
 .logo {
+  font-family: 'Lovers Quarrel', cursive;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -31,7 +33,7 @@ body, header, main {
   margin: 0;
 }
 .menu a {
-  font-family: 'Playfair Display';
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   padding: 12px 20px;
   color: rgb(0, 0, 0);
@@ -57,7 +59,7 @@ body, header, main {
 
 .principal a:hover {
   transform: scale(1.1);
-  background-color:#4c5aa6aa;
+  background-color:#0020d8aa;
   color: rgb(4, 0, 0);
   border-color: rgb(0, 0, 0);
 }
@@ -65,7 +67,7 @@ body, header, main {
   text-decoration: none;
   display: inline-block;
   padding: 14px 20px;
-  background-color:#386695ce;
+  background-color:#333a9f;
   color: rgb(255, 255, 255);
   border-color: rgb(0, 0, 0);
   border-radius: 12px;
