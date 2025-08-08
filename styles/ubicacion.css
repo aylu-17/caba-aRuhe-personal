@@ -2,10 +2,14 @@
 body, header, main {
   margin: 0;
   padding: 0;
-  background-color: #dad1d1;
-  font-family: "Cinzel";
-  
+  background-color: #dad1d1;  
 }
+@font-face {
+      font-family: 'Glacial Indifference';
+      src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 /* menu barra  */
 .barra-superior {
   display: flex;
@@ -62,36 +66,41 @@ body, header, main {
   padding: 0px 40px;
   max-width: 1300px;
 }
-.principal p {
+.principal h1 {
+  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
   margin-top: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+.principal p {
+  font-family: 'Glacial Indifference', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
   line-height: 1.6;
-  font-size: 21px;
+  font-size: 20px;
 }
 /* boton */
 .principal-botones {
   display: flex;
   flex-direction: column;
-  align-items: center;    
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
   gap: 10px;
 }
-
 .principal-botones a {
+  font-family: 'Arimo', sans-serif;
   text-decoration: none;
   display: inline-block;
-  padding: 14px 20px;
-  background-color: #423cb3;
+  padding: 18px 20px;
+  background-color:#2e5984;
   color: rgb(255, 255, 255);
-  border: 1px solid #50749784;
+  border-color: rgb(0, 0, 0);
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 17px;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  width: 200px;
-  text-align: center;
-}
-
+} 
 .principal-botones a:hover {
   transform: scale(1.1);
   background-color: #4c5aa6d1;

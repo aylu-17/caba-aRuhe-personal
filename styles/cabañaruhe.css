@@ -1,295 +1,69 @@
-/* dody */
-body, header, main {
-  margin: 0;
-  padding: 0;
-  background-color: #dad1d1;
-  font-family: "Cinzel";
-}
-/* header , menu */
-.barra-superior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  gap: 15px;
-}
-.logo {
-  font-family: 'Lovers Quarrel', cursive;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0;
-}
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.menu a {
-  text-decoration: none;
-  padding: 12px 20px;
-  color: rgb(0, 0, 0);
-  border: 1px solid rgb(93, 55, 55);
-  border-radius: 12px;
-  font-size: 14px;
-  display: inline-block;
-  font-family: 'Roboto', sans-serif;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-.menu a:hover {
-  transform: scale(1.1);
-  background-color: rgba(156, 82, 82, 0.46);
-  color: #000000;
-  border-color: #ab2a2a;
-}
-/* texto principal  */
-.principal {
-  margin: 0 ;
-  padding: 0px 40px;
-  max-width: 1300px;
-}
-.principal p {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  font-size: 25px;
-}
-/* fotos del texto informacion  */
-.fotos_info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  padding: 20px;
-  font-size: 22px;
-  color: #1b2f7c;
-  align-items: center;
-  justify-content: flex-start;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
 }
 
-.fotos_info div {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  min-width: 180px;
-}
-
-.fotos_info img {
-  width: 55px;
-}
-/* fotos del texto del servicio  */
-.fotos_servi {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px 30px;
-  padding: 20px 30px;
-  max-width: 1150px;
-  font-size: 22px;
-  color: #1b2f7c;
-  justify-content: space-between;
-}
-
-.item-servicio {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.item-servicio img {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
-}
-/* botones */
-.principal-botones {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 10px;
-}
-.principal-botones a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 14px 20px;
-  background-color: #105191db;
-  color: rgb(255, 255, 255);
-  border: 1px solid #50749784;
-  border-radius: 12px;
-  font-size: 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  width: 200px;
-  text-align: center;
-}
-
-.principal-botones a:hover {
-  transform: scale(1.1);
-  background-color: #4c5aa6d1;
-  color: rgb(4, 0, 0);
-  border-color: #4c5aa6d1
-}
-/* titulo de las fotos */
-.titulo-fotos {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  margin: 40px auto 10px;
-  color: #222;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-/* fotos de la cabaña */
-.fotos_cabaña {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 15px;
-  background-color: #eeecec;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.fotos_cabaña h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.slides-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-/* cuadro exterior */
-.slides {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-}
-/* color del cuadro y posicionn de imagen */
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  pointer-events: none;
-  background-color: #fff;
-}
-
-.slide.active {
-  opacity: 1;
-  transform: scale(1);
-  pointer-events: auto;
-  position: relative;
-}
-/* puntos de abajo */
-.indicadores {
-  margin-top: 15px;
-  text-align: center;
-}
-
-.punto {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 6px;
-  background-color: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.punto:hover {
-  background-color: #999;
-}
-
-.punto.active {
-  background-color: #333;
-}
-/* boton de menu */
-.hamburguesa {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #333;
-}
-/*  responsive para el celu */
-@media (max-width: 768px) {
-  .fotos_cabaña {
-    max-width: 100%;
-    padding: 10px;
-  }
-  .fotos_cabaña h3 {
-    font-size: 22px;
-  }
-  .menu {
-    display: none;
-    flex-direction:row;
-    gap: 15px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .menu.show {
+body {
+    background-color: #ddd2c7; /* Color beige claro */
+    color: #000;
     display: flex;
-  }
-  .menu a {
-    padding: 10px;
-    border-radius: 8px;
-    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-family: 'Didot', serif;
+    font-weight: normal;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
     text-align: center;
-  }
-  .hamburguesa {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-  }
-  .punto {
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-  }
+    text-transform: uppercase;
+}
 
-  .principal {
-    padding: 0 20px;
-  }
+/* Contenedor de cajas */
+.boxes {
+    display: flex;
+    gap: 30px;
+    background-size: cover;
+    background-position: center;
+    padding: 25px 20px;
+    border: 1px solid #000;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+    background-image: url("../public/tu-imagen.jpg"); /* Cambia por tu ruta */
+}
 
-  .principal p {
-    font-size: 18px;
-  }
+/* Caja individual */
+.box {
+    flex: 1;
+    background-color: rgba(0, 0, 50, 0.6);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    border-radius: 2px;
+}
 
-  .item-servicio {
-    font-size: 16px;
-  }
-
-  .item-servicio img {
-    width: 35px;
-    height: 35px;
-  }
-
-  .slides-container {
-    padding: 8px;
-  }
-
-  .slides {
-    aspect-ratio: 3 / 2;
-  }
-
-  .slide {
-    border-radius: 10px;
-  }
+/* Texto de cada caja */
+.box h2 {
+    font-family: 'Didot', serif;
+    color: #dcdff7;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    user-select: none;
 }

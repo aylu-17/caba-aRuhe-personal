@@ -92,11 +92,17 @@ body, header, main {
   background-position: center;
   border-radius: 8px;
   opacity: 100px;
-
 }
 
-.otoño {
-  background-image: url('../public/otoño_foto.jpg'); /* usá la imagen real */
+.tarifa-estacion.primavera h3 {
+  color: white;
+}
+
+.tarifa-estacion.invierno h3 {
+  color: black;
+}
+.primavera {
+  background-image: url('../public/primavera.png'); /* usá la imagen real */
 }
 
 .invierno {

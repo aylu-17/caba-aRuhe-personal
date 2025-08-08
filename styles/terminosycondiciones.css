@@ -1,136 +1,69 @@
-body, header, main {
-  margin: 0;
-  padding: 0;
-  background-color: #dad1d1;
-  font-family: "Cinzel";
-}
-/* header , menu */
-.barra-superior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  gap: 15px;
-}
-.logo {
-  font-family: 'Lovers Quarrel', cursive;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0;
-}
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.menu a {
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-  padding: 12px 20px;
-  color: rgb(0, 0, 0);
-  border: 1px solid rgb(93, 55, 55);
-  border-radius: 12px;
-  font-size: 14px;
-  display: inline-block;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-.menu a:hover {
-  transform: scale(1.1);
-  background-color: rgba(156, 82, 82, 0.46);
-  color: #000000;
-  border-color: #ab2a2a;
-}
-/* menu boton */
-.hamburguesa {
-  display: none;
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  z-index: 3;
-}
-.principal {
-  margin: 0 ;
-  padding: 0px 40px;
-  max-width: 1300px;
-}
-.principal p {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  font-size: 21px;
-}
-.condicion {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  border-radius: 8px;
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
 }
 
-.icono img {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-
-}
-
-.texto {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
-  line-height: 1.5;
-  font-size: 20px;
-  max-width: 800px;
-}
-
-.texto strong {
-  display: inline-block;
-  margin-bottom: 4px;
-}
-@media (max-width: 768px) {
-  .menu {
-     display: none;
-    flex-direction:row;
-    gap: 15px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .menu.show {
+body {
+    background-color: #ddd2c7; /* beige claro */
+    color: #000;
     display: flex;
-  }
-  .menu a {
-    padding: 10px;
-    border-radius: 8px;
-    display: block;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Didot', serif;
+    font-weight: normal;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
     text-align: center;
-  }
-  .hamburguesa {
-    display: block;
-  }
-  .condicion {
+    text-transform: uppercase;
+}
+
+/* Contenedor con fondo */
+.boxes {
+    display: flex;
+    gap: 30px;
+    background-image: url('../public/administracion_ruhe.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 25px 20px;
+    border: 1px solid #000; /* borde negro fino como en la imagen */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Cajas semitransparentes */
+.box {
+    flex: 1;
+    background-color: rgba(0, 0, 50, 0.6);
+    height: 250px;
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
-  }
-  .icono img {
-    margin-bottom: 5px;
-  }
+    padding-top: 20px;
+    border-radius: 2px;
+}
 
-  .texto {
-    font-size: 18px;
-    max-width: 100%;
-  }
-
-  .principal {
-    padding: 0 20px;
-  }
-
-  .principal p {
-    font-size: 18px;
-  }
+/* Texto de cada caja */
+.box h2 {
+    font-family: 'Didot', serif;
+    color: #dcdff7;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    user-select: none;
 }
