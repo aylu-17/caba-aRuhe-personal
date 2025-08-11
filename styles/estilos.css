@@ -506,14 +506,24 @@ body, html {
   color: #4cdbd3;
 }
 
-.redes-simple {
-  margin-top: 15px;
+.footer-icons {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
 }
 
-.redes-simple a {
-  margin: 0 12px;
-  font-size: 15px;
-  display: inline-block;
+.footer-icons .icon-link img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%); /* Los deja en escala de grises */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icons .icon-link:hover img {
+  filter: none; /* Color original al pasar el mouse */
+  transform: scale(1.1);
 }
 
 /* === MEDIA QUERY (para móviles) === */

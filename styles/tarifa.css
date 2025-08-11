@@ -1,11 +1,20 @@
-/* dody */
-body, header, main {
+/* -------------------- Reset básico -------------------- */
+body,
+header,
+main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;
-  font-family: 'Glacial Indifference', sans-serif;
 }
-/* header , menu */
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -------------------- Header & Menú -------------------- */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -13,6 +22,7 @@ body, header, main {
   padding: 10px 20px;
   gap: 15px;
 }
+
 .logo {
   font-family: 'Lovers Quarrel', cursive;
   display: flex;
@@ -20,6 +30,7 @@ body, header, main {
   gap: 10px;
   margin: 0;
 }
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -28,6 +39,7 @@ body, header, main {
   padding: 0;
   margin: 0;
 }
+
 .menu a {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -37,15 +49,21 @@ body, header, main {
   border-radius: 12px;
   font-size: 14px;
   display: inline-block;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: 
+    transform 0.3s ease, 
+    background-color 0.3s ease, 
+    color 0.3s ease, 
+    border-color 0.3s ease;
 }
+
 .menu a:hover {
   transform: scale(1.1);
   background-color: rgba(156, 82, 82, 0.46);
   color: #000000;
   border-color: #ab2a2a;
 }
-/* menu boton */
+
+/* -------------------- Botón Menú -------------------- */
 .hamburguesa {
   display: none;
   font-size: 26px;
@@ -56,22 +74,25 @@ body, header, main {
   z-index: 3;
 }
 
+/* -------------------- Tarifas -------------------- */
 .tarifas {
-  padding: 10px 30px;
+  padding: 0 40px;
   text-align: center;
 }
+
 
 .tarifas h2 {
   font-family: 'Playfair Display', serif;
   font-weight: normal;
   text-align: left;
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 38px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .subtitulo {
   font-family: 'Marcellus', serif;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 30px;
   font-weight: 500;
 }
@@ -84,6 +105,7 @@ body, header, main {
 }
 
 .tarifa-estacion {
+  font-family: 'Glacial Indifference', sans-serif;
   flex: 1 1 300px;
   max-width: 400px;
   color: rgb(248, 246, 246);
@@ -94,6 +116,36 @@ body, header, main {
   opacity: 100px;
 }
 
+.tarifa-estacion h3 {
+  font-family: 'Playfair Display', serif; 
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tarifa-estacion p {
+  -webkit-text-stroke: 0.5px black;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.tarifa-estacion ul {
+  list-style: none;
+  padding: 0;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.tarifa-estacion li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* -------------------- Colores de estaciones -------------------- */
 .tarifa-estacion.primavera h3 {
   color: white;
 }
@@ -101,55 +153,54 @@ body, header, main {
 .tarifa-estacion.invierno h3 {
   color: black;
 }
+
 .primavera {
-  background-image: url('../public/primavera.png'); /* usá la imagen real */
+  background-image: url('../public/primavera.png');
 }
 
 .invierno {
-  background-image: url('../public/invierno_foto.jpg'); /* usá la imagen real */
+  background-image: url('../public/invierno_foto.jpg');
 }
 
-.tarifa-estacion h3 {
-  color: black;
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.tarifa-estacion p {
-  -webkit-text-stroke: 0.5px black;
-  font-size: 22px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.tarifa-estacion ul {
-  font-weight: normal;
-  list-style: none;
-  padding: 0;
-  color: white;
-  -webkit-text-stroke: 1px black;
-}
-
-
-.tarifa-estacion li {
-  display: flex;
-  justify-content: space-between;
-  margin: 8px 0;
-  font-size: 32px;
-  font-weight: bold;
-}
-
+/* -------------------- Nota -------------------- */
 .nota {
   margin-top: 30px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 00;
+}
+/* =========================
+    FOOTER
+  ========================= */
+  .footer {
+  padding: 10px 20px;
+  text-align: left;
 }
 
+.footer-icons {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icons .icon-link img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%); /* Los deja en escala de grises */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icons .icon-link:hover img {
+  filter: none; /* Color original al pasar el mouse */
+  transform: scale(1.1);
+}
+/* -------------------- Responsive -------------------- */
 @media (max-width: 768px) {
   .menu {
     display: none;
-    flex-direction: row; 
-    flex-wrap: wrap;    
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     width: 100%;

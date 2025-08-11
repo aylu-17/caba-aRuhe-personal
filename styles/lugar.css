@@ -1,15 +1,18 @@
+/* ======= GLOBAL ======= */
 body, header, main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;
 }
-@font-face {
-      font-family: 'Glacial Indifference';
-      src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
 
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ======= HEADER ======= */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -17,7 +20,6 @@ body, header, main {
   padding: 10px 20px;
   gap: 15px;
 }
-
 
 .logo {
   font-family: 'Lovers Quarrel', cursive;
@@ -27,7 +29,7 @@ body, header, main {
   margin: 0;
 }
 
-
+/* ======= MENÚ ======= */
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +38,7 @@ body, header, main {
   padding: 0;
   margin: 0;
 }
+
 .menu a {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -43,9 +46,10 @@ body, header, main {
   color: rgb(0, 0, 0);
   border: 1px solid rgb(93, 55, 55);
   border-radius: 12px;
-  font-size: 14 px;
+  font-size: 14px;
   display: inline-block;  
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, 
+              color 0.3s ease, border-color 0.3s ease;
 }
 
 .menu a:hover {
@@ -53,52 +57,6 @@ body, header, main {
   background-color: rgba(156, 82, 82, 0.46);
   color: #000000;
   border-color: #ab2a2a;  
-}
-
-.principal {
-  margin: 0 ;
-  padding: 0px 40px;
-  max-width: 1300px;
-}
-.principal h1 {
-  font-weight: normal;
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-
-.principal a {
-  font-family: 'Arimo', sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  padding: 18px 20px;
-  background-color:#2e5984;
-  color: rgb(255, 255, 255);
-  border-color: rgb(0, 0, 0);
-  border-radius: 12px;
-  font-size: 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-} 
-.principal a:hover {
-  transform: scale(1.1);
-  background-color:#0020d8aa;
-  color: rgb(4, 0, 0);
-  border-color: rgb(0, 0, 0);
-}
-.principal p {
-  font-family: 'Glacial Indifference', sans-serif;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  line-height: 1.6;
-  font-size: 20px;
-}
-
-.principal ul {
-  margin: 10px 0 30px 20px;
-  line-height: 1.6;
-  font-size: 15px;
 }
 
 .hamburguesa {
@@ -111,10 +69,59 @@ body, header, main {
   z-index: 3;
 }
 
-/* Turismo */
+/* ======= PRINCIPAL ======= */
+.principal {
+  margin: 0;
+  padding: 0 40px;
+  max-width: 1300px;
+}
+
+.principal h1 {
+  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.principal p {
+  font-family: 'Glacial Indifference', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-size: 22px;
+}
+
+
+.principal ul {
+  margin: 10px 0 30px 20px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.principal a {
+  font-family: 'Arimo', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  padding: 18px 20px;
+  background-color: #2e5984;
+  color: #fff;
+  border-color: rgb(0, 0, 0);
+  font-size: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+} 
+
+.principal a:hover {
+  transform: scale(1.1);
+  background-color: #0020d8aa;
+  color: rgb(4, 0, 0);
+  border-color: rgb(0, 0, 0);
+}
+
+/* ======= TURISMO ======= */
 .Turismo {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 30px;
 }
@@ -122,7 +129,7 @@ body, header, main {
 .turismo-card {
   background-color: #ffffff;
   border: 1px solid #ccc;
-  border-radius: 12px;
+  border-radius: 18px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -143,9 +150,9 @@ body, header, main {
 }
 
 .turismo-card h2 {
-  font-size: 20px;
+  font-size: 22px;
   margin: 16px 0 8px;
-  color: #333;
+  color: #000000;
 }
 
 .turismo-card p {
@@ -154,18 +161,48 @@ body, header, main {
   color: #555;
 }
 
+/* =========================
+    FOOTER
+  ========================= */
+  .footer {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.footer-icons {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icons .icon-link img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%); /* Los deja en escala de grises */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icons .icon-link:hover img {
+  filter: none; /* Color original al pasar el mouse */
+  transform: scale(1.1);
+}
+/* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
   .menu {
     display: none;
-    flex-direction:row;
+    flex-direction: row;
     gap: 15px;
     justify-content: center;
     width: 100%;
     margin-top: 20px;
   }
+
   .menu.show {
     display: flex;
   }
+
   .menu a {
     padding: 10px;
     border-radius: 8px;
@@ -176,6 +213,7 @@ body, header, main {
   .hamburguesa {
     display: block;
   }
+
   .Turismo {
     justify-content: center;
     flex-direction: column;
@@ -208,5 +246,4 @@ body, header, main {
     padding-left: 0;
     list-style-position: inside;
   }
-
 }

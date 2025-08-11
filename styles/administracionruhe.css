@@ -1,11 +1,53 @@
+/* Reset y estilos base */
 body, header, main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;
-  font-family: "Cinzel";
-
 }
-/* header , menu */
+
+/* Fuentes */
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 1450px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/* Tipografías */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.box h2 {
+  font-family: 'Playfair Display', serif;
+  color: #dcdff7;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Barra superior - header y menú */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -13,6 +55,8 @@ body, header, main {
   padding: 10px 20px;
   gap: 15px;
 }
+
+/* Logo */
 .logo {
   font-family: 'Lovers Quarrel', cursive;
   display: flex;
@@ -20,6 +64,8 @@ body, header, main {
   gap: 10px;
   margin: 0;
 }
+
+/* Menú */
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -28,8 +74,8 @@ body, header, main {
   padding: 0;
   margin: 0;
 }
+
 .menu a {
-  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   padding: 12px 20px;
   color: rgb(0, 0, 0);
@@ -37,8 +83,10 @@ body, header, main {
   border-radius: 12px;
   font-size: 14px;
   display: inline-block;
+  font-family: 'Roboto', sans-serif;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
 .menu a:hover {
   transform: scale(1.1);
   background-color: rgba(156, 82, 82, 0.46);
@@ -46,6 +94,7 @@ body, header, main {
   border-color: #ab2a2a;
 }
 
+/* Botón hamburguesa */
 .hamburguesa {
   display: none;
   font-size: 26px;
@@ -55,53 +104,124 @@ body, header, main {
   cursor: pointer;
   z-index: 3;
 }
-.principal {
-  margin: 0 ;
-  padding: 0px 40px;
-  max-width: 100%;
+
+/* Boxes */
+.boxes {
+  display: flex;
+  gap: 45px;
+  background-size: cover;
+  background-position: center;
+  padding: 30px 50px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  background-image: url("../public/administracion_ruhe.jpg");
 }
-.principal h1 {
-  font-family: 'Georgia', serif;
-  font-size: 36px;
-  color: #1f1f1f;
-  margin-bottom: 30px;
+
+.box {
+  flex: 1;
+  background-color: rgba(0, 0, 50, 0.6);
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+
+/* Responsive */
+
+/* Para pantallas menores a 1024px */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .boxes {
+    flex-direction: column;
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .box {
+    height: auto;
+    min-height: 300px;
+    padding: 30px 20px;
+  }
+
+  .barra-superior {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+}
+/* =========================
+    FOOTER
+  ========================= */
+  .footer {
+  padding: 10px 20px;
   text-align: left;
 }
-.principal h2 {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 28px;
-  color: #000000;
-  margin-bottom: 15px;
+
+.footer-icons {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
 }
-.principal p {
-  text-align: center;
-  font-size: 18px;
-  color: #333;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+
+.footer-icons .icon-link img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%); /* Los deja en escala de grises */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
+
+.footer-icons .icon-link:hover img {
+  filter: none; /* Color original al pasar el mouse */
+  transform: scale(1.1);
+}
+/* Para pantallas menores a 768px (móviles) */
 @media (max-width: 768px) {
-    .menu {
-     display: none;
-    flex-direction:row;
-    gap: 15px;
-    justify-content: center;
+  .menu {
+    display: none; /* Oculto menú para usar hamburguesa */
     width: 100%;
-    margin-top: 20px;
+    flex-direction: column;
+    background-color: #dad1d1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    border-top: 1px solid #ab2a2a;
+    z-index: 2;
   }
-  .menu.show {
+
+  .menu.active {
     display: flex;
   }
+
   .menu a {
-    padding: 10px;
-    border-radius: 8px;
-    display: block;
-    text-align: center;
+    padding: 12px 15px;
+    border-radius: 0;
+    border-bottom: 1px solid #ab2a2a;
   }
 
   .hamburguesa {
     display: block;
+  }
+
+  .barra-superior {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .boxes {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .box {
+    padding-top: 10px;
+    height: auto;
+    min-height: 250px;
   }
 }

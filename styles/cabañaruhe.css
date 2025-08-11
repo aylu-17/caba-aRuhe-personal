@@ -1,69 +1,386 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', serif;
+/* ======================
+   Base y fuentes
+====================== */
+body, header, main {
+  margin: 0;
+  padding: 0;
+  background-color: #dad1d1;
 }
 
-body {
-    background-color: #ddd2c7; /* Color beige claro */
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.container {
-    max-width: 900px;
-    width: 100%;
-    padding: 40px 20px;
+/* ======================
+   Header y menú
+====================== */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 15px;
 }
 
-h1 {
-    font-family: 'Didot', serif;
-    font-weight: normal;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+.logo {
+  font-family: 'Lovers Quarrel', cursive;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
 }
 
-h3 {
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Contenedor de cajas */
-.boxes {
-    display: flex;
-    gap: 30px;
-    background-size: cover;
-    background-position: center;
-    padding: 25px 20px;
-    border: 1px solid #000;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
-    background-image: url("../public/tu-imagen.jpg"); /* Cambia por tu ruta */
+.menu a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  padding: 12px 20px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(93, 55, 55);
+  border-radius: 12px;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Caja individual */
-.box {
-    flex: 1;
-    background-color: rgba(0, 0, 50, 0.6);
-    height: 250px;
-    display: flex;
+.menu a:hover {
+  transform: scale(1.1);
+  background-color: rgba(156, 82, 82, 0.46);
+  color: #000000;
+  border-color: #ab2a2a;
+}
+
+/* ======================
+   Texto principal
+====================== */
+.principal {
+  margin: 0;
+  padding: 0 40px;
+  max-width: 1300px;
+}
+
+.principal h1 {
+  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.principal h2 {
+  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.principal p {
+  font-family: 'Glacial Indifference', sans-serif;
+  margin-top: 30px;
+  line-height: 1.6;
+  font-size: 22px;
+}
+
+/* ======================
+   Fotos - información
+====================== */
+.fotos_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  font-size: 22px;
+  color: #1b2f7c;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fotos_info div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 180px;
+}
+
+.fotos_info img {
+  width: 55px;
+}
+
+/* ======================
+   Fotos - servicios
+====================== */
+.fotos_servi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px 30px;
+  padding: 20px 30px;
+  max-width: 1150px;
+  font-size: 22px;
+  color: #1b2f7c;
+  justify-content: space-between;
+}
+
+.item-servicio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-servicio img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* ======================
+   Botones principales
+====================== */
+.principal-botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.principal-botones a {
+  font-family: 'Arimo', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  padding: 18px 20px;
+  background-color: #2e5984;
+  color: rgb(255, 255, 255);
+  border-color: rgb(0, 0, 0);
+  border-radius: 12px;
+  font-size: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.principal-botones a:hover {
+  transform: scale(1.1);
+  background-color: #4c5aa6d1;
+  color: rgb(4, 0, 0);
+  border-color: #4c5aa6d1;
+}
+
+/* ======================
+   Título fotos
+====================== */
+.titulo-fotos {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+  margin: 40px auto 10px;
+}
+
+/* ======================
+   Fotos cabaña
+====================== */
+.fotos_cabaña {
+  max-width: 460px;
+  margin: 30px auto;
+  padding: 15px;
+  background-color: #eeecec;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fotos_cabaña h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Contenedor slides */
+.slides-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Marco slides */
+.slides {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+/* Imagen slide */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+  background-color: #fff;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Indicadores */
+.indicadores {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.punto {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.punto:hover {
+  background-color: #999;
+}
+
+.punto.active {
+  background-color: #333;
+}
+
+/* ======================
+   Botón menú hamburguesa
+====================== */
+.hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+/* =========================
+    FOOTER
+  ========================= */
+  .footer {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.footer-icons {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icons .icon-link img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%); /* Los deja en escala de grises */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icons .icon-link:hover img {
+  filter: none; /* Color original al pasar el mouse */
+  transform: scale(1.1);
+}
+/* ======================
+   Responsive
+====================== */
+@media (max-width: 768px) {
+  .fotos_cabaña {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .fotos_cabaña h3 {
+    font-size: 22px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: row;
+    gap: 15px;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 20px;
-    border-radius: 2px;
-}
+    width: 100%;
+    margin-top: 20px;
+  }
 
-/* Texto de cada caja */
-.box h2 {
-    font-family: 'Didot', serif;
-    color: #dcdff7;
-    font-weight: 400;
-    font-size: 1.8rem;
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
     text-align: center;
-    user-select: none;
+  }
+
+  .hamburguesa {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .punto {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+
+  .principal {
+    padding: 0 20px;
+  }
+
+  .principal p {
+    font-size: 18px;
+  }
+
+  .item-servicio {
+    font-size: 16px;
+  }
+
+  .item-servicio img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .slides-container {
+    padding: 8px;
+  }
+
+  .slides {
+    aspect-ratio: 3 / 2;
+  }
+
+  .slide {
+    border-radius: 10px;
+  }
 }

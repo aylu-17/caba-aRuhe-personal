@@ -1,16 +1,22 @@
-/* body  */
+/* =========================
+   Body y estructura base
+========================= */
 body, header, main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;  
 }
+
 @font-face {
-      font-family: 'Glacial Indifference';
-      src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-/* menu barra  */
+  font-family: 'Glacial Indifference';
+  src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================
+   Barra superior y menú
+========================= */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -18,13 +24,15 @@ body, header, main {
   padding: 10px 20px;
   gap: 15px;
 }
+
 .logo {
-   font-family: 'Lovers Quarrel', cursive;
+  font-family: 'Lovers Quarrel', cursive;
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 0;
 }
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -33,6 +41,7 @@ body, header, main {
   padding: 0;
   margin: 0;
 }
+
 .menu a {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -51,6 +60,7 @@ body, header, main {
   color: #000000;
   border-color: #ab2a2a;  
 }
+
 .hamburguesa {
   display: none;
   font-size: 26px;
@@ -60,27 +70,35 @@ body, header, main {
   cursor: pointer;
   z-index: 3;
 }
-/* texto principal */
+
+/* =========================
+   Texto principal
+========================= */
 .principal {
-  margin: 0 ;
+  margin: 0;
   padding: 0px 40px;
   max-width: 1300px;
 }
+
 .principal h1 {
   font-weight: normal;
   font-family: 'Playfair Display', serif;
-  font-size: 36px;
+  font-size: 38px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .principal p {
   font-family: 'Glacial Indifference', sans-serif;
   margin-top: 30px;
   margin-bottom: 30px;
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 22px;
 }
-/* boton */
+
+/* =========================
+   Botones principales
+========================= */
 .principal-botones {
   display: flex;
   flex-direction: column;
@@ -89,25 +107,31 @@ body, header, main {
   margin-top: 20px;
   gap: 10px;
 }
+
 .principal-botones a {
   font-family: 'Arimo', sans-serif;
   text-decoration: none;
   display: inline-block;
   padding: 18px 20px;
-  background-color:#2e5984;
+  background-color: #2e5984;
   color: rgb(255, 255, 255);
   border-color: rgb(0, 0, 0);
   border-radius: 12px;
-  font-size: 17px;
+  font-size: 20px;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-} 
+}
+
 .principal-botones a:hover {
   transform: scale(1.1);
   background-color: #4c5aa6d1;
   color: rgb(4, 0, 0);
-  border-color: #4c5aa6d1
+  border-color: #4c5aa6d1;
 }
-/* imagenes */
+
+
+/* =========================
+   Imágenes
+========================= */
 .imagenes-ubicacion {
   display: flex;
   flex-wrap: wrap;
@@ -128,28 +152,62 @@ body, header, main {
 .imagenes-ubicacion img:hover {
   transform: scale(1.03);
 }
-/* responsive para el celu */
+/* =========================
+    FOOTER
+  ========================= */
+  .footer {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.footer-icons {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icons .icon-link img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%); /* Los deja en escala de grises */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icons .icon-link:hover img {
+  filter: none; /* Color original al pasar el mouse */
+  transform: scale(1.1);
+}
+
+/* =========================
+   Responsive
+========================= */
 @media (max-width: 768px) {
   .menu {
-     display: none;
-    flex-direction:row;
+    display: none;
+    flex-direction: row;
     gap: 15px;
     justify-content: center;
     width: 100%;
     margin-top: 20px;
   }
+
   .menu.show {
     display: flex;
   }
+
   .menu a {
     padding: 10px;
     border-radius: 8px;
     display: block;
     text-align: center;
   }
+
   .hamburguesa {
     display: block;
   }
+
   .imagenes-ubicacion {
     flex-direction: column;
     align-items: center;
