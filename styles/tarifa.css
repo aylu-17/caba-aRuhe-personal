@@ -6,6 +6,7 @@ main {
   padding: 0;
   background-color: #dad1d1;
 }
+
 @font-face {
   font-family: 'Glacial Indifference';
   src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf')
@@ -23,12 +24,14 @@ main {
   gap: 15px;
 }
 
+/* Logo */
 .logo {
-  font-family: 'Lovers Quarrel', cursive;
+  font-family: 'Marcellus', serif;
   display: flex;
   align-items: center;
+  color: rgb(0, 0, 0);
   gap: 10px;
-  margin: 0;
+  font-size: 18px;
 }
 
 .menu {
@@ -44,22 +47,21 @@ main {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   padding: 12px 20px;
-  color: rgb(0, 0, 0);
+  color: #000;
   border: 1px solid rgb(93, 55, 55);
   border-radius: 12px;
   font-size: 14px;
   display: inline-block;
-  transition: 
-    transform 0.3s ease, 
-    background-color 0.3s ease, 
-    color 0.3s ease, 
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
     border-color 0.3s ease;
 }
 
 .menu a:hover {
   transform: scale(1.1);
   background-color: rgba(156, 82, 82, 0.46);
-  color: #000000;
   border-color: #ab2a2a;
 }
 
@@ -69,7 +71,7 @@ main {
   font-size: 26px;
   background: none;
   border: none;
-  color: rgb(0, 0, 0);
+  color: #000;
   cursor: pointer;
   z-index: 3;
 }
@@ -79,7 +81,6 @@ main {
   padding: 0 40px;
   text-align: center;
 }
-
 
 .tarifas h2 {
   font-family: 'Playfair Display', serif;
@@ -108,16 +109,15 @@ main {
   font-family: 'Glacial Indifference', sans-serif;
   flex: 1 1 300px;
   max-width: 400px;
-  color: rgb(248, 246, 246);
+  color: #f8f6f6;
   padding: 30px;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  opacity: 100px;
 }
 
 .tarifa-estacion h3 {
-  color: white; 
+  color: white;
   font-family: 'Playfair Display', serif;
   font-size: 35px;
   margin-bottom: 20px;
@@ -129,6 +129,7 @@ main {
     0.7px -0.7px 0.5px black,
     -0.7px -0.7px 0.5px black;
 }
+
 .tarifa-estacion p {
   -webkit-text-stroke: 0.5px black;
   font-size: 24px;
@@ -152,31 +153,26 @@ main {
 }
 
 /* -------------------- Colores de estaciones -------------------- */
-.tarifa-estacion.primavera h3 {
-  color: white;
+.primavera {
+  background-image: url('../public/primavera.png');
+}
+
+.invierno {
+  background-image: url('../public/octubre y nov.png');
 }
 
 .tarifa-estacion.invierno h3 {
   color: black;
 }
 
-.primavera {
-  background-image: url('../public/primavera.png');
-}
-
-.invierno {
-  background-image: url('../public/octubre\ y\ nov.png');
-}
-
 /* -------------------- Nota -------------------- */
 .nota {
   margin-top: 30px;
   font-size: 17px;
-  font-weight: 00;
+  font-weight: 400;
 }
-/* =========================
-    FOOTER
-  ========================= */
+
+/* -------------------- Footer -------------------- */
 .footer {
   padding: 10px 20px;
   text-align: left;
@@ -192,32 +188,91 @@ main {
 .footer-icons .icon-link img {
   width: 30px;
   height: 30px;
-  filter: grayscale(100%); /* Los deja en escala de grises */
+  filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
 .footer-icons .icon-link:hover img {
-  filter: none; /* Color original al pasar el mouse */
+  filter: none;
   transform: scale(1.1);
 }
+
 /* -------------------- Responsive -------------------- */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10px;
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .tarifas {
+    padding: 0 20px;
   }
 
-  .menu.show {
+  .tarifas h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .tarifa-estacion {
+    max-width: 100%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+.menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #dad1d1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #ab2a2a;
+    z-index: 2;
+  }
+
+  .menu.active {
     display: flex;
+  }
+
+  .menu a {
+    padding: 12px 15px;
+    border-radius: 0;
+    border-bottom: 1px solid #ab2a2a;
   }
 
   .hamburguesa {
     display: block;
+  }
+
+  .barra-superior {
+    flex-wrap: wrap;
+  }
+
+  .tarifas {
+    padding: 0 15px;
+  }
+
+  .tarifas h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .tarifa-estacion {
+    flex: 1 1 100%;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .tarifa-estacion h3 {
+    font-size: 24px;
+  }
+
+  .tarifa-estacion li {
+    font-size: 20px;
+  }
+
+  .nota {
+    font-size: 15px;
+    text-align: center;
   }
 }
