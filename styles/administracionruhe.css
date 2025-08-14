@@ -1,11 +1,12 @@
-/* Reset y estilos base */
+/* =========================
+   RESET Y ESTILOS BASE
+========================= */
 body, header, main {
   margin: 0;
   padding: 0;
   background-color: #dad1d1;
 }
 
-/* Fuentes */
 @font-face {
   font-family: 'Glacial Indifference';
   src: url('https://raw.githubusercontent.com/google/fonts/main/ofl/glacialindifference/GlacialIndifference-Regular.ttf') format('truetype');
@@ -13,7 +14,9 @@ body, header, main {
   font-style: normal;
 }
 
-/* Contenedor general */
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
 .container {
   max-width: 1450px;
   width: 100%;
@@ -21,7 +24,9 @@ body, header, main {
   margin: 0 auto;
 }
 
-/* Tipografías */
+/* =========================
+   TIPOGRAFÍAS
+========================= */
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: normal;
@@ -47,7 +52,9 @@ h3 {
   user-select: none;
 }
 
-/* Barra superior - header y menú */
+/* =========================
+   HEADER Y MENÚ
+========================= */
 .barra-superior {
   display: flex;
   justify-content: space-between;
@@ -56,7 +63,6 @@ h3 {
   gap: 15px;
 }
 
-/* Logo */
 .logo {
   font-family: 'Lovers Quarrel', cursive;
   display: flex;
@@ -65,7 +71,6 @@ h3 {
   margin: 0;
 }
 
-/* Menú */
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -78,19 +83,18 @@ h3 {
 .menu a {
   text-decoration: none;
   padding: 12px 20px;
-  color: rgb(0, 0, 0);
+  color: #000;
   border: 1px solid rgb(93, 55, 55);
   border-radius: 12px;
   font-size: 14px;
-  display: inline-block;
   font-family: 'Roboto', sans-serif;
+  display: inline-block;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .menu a:hover {
   transform: scale(1.1);
   background-color: rgba(156, 82, 82, 0.46);
-  color: #000000;
   border-color: #ab2a2a;
 }
 
@@ -100,63 +104,105 @@ h3 {
   font-size: 26px;
   background: none;
   border: none;
-  color: rgb(0, 0, 0);
+  color: #000;
   cursor: pointer;
   z-index: 3;
 }
 
-/* Boxes */
-.boxes {
+/* =========================
+   SECCIONES
+========================= */
+.section1, .section2 {
   display: flex;
-  gap: 45px;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+  padding: 25px;
+  margin: 0 80px;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  padding: 30px 50px;
-  border: 1px solid #000000;
   border-radius: 15px;
+  overflow: hidden;
+}
+
+.section1 {
   background-image: url("../public/administracion_ruhe.jpg");
 }
 
-.box {
-  flex: 1;
-  background-color: rgba(0, 0, 50, 0.6);
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;
-  border-radius: 20px;
+.section2 {
+  background-image: url("../public/administracion_ruhe2.jpg");
 }
 
-/* Responsive */
-
-/* Para pantallas menores a 1024px */
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 20px;
-  }
-
-  .boxes {
-    flex-direction: column;
-    padding: 20px;
-    gap: 25px;
-  }
-
-  .box {
-    height: auto;
-    min-height: 300px;
-    padding: 30px 20px;
-  }
-
-  .barra-superior {
-    flex-wrap: wrap;
-    padding: 10px 15px;
-  }
-}
 /* =========================
-    FOOTER
-  ========================= */
-  .footer {
+   CARDS
+========================= */
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card.white {
+  background: rgba(255, 255, 255, 0.812);
+  color: #000;
+  text-align: center;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.card.white h3 {
+  color: #2c0dc6;
+}
+
+.card:not(.white) h3 {
+  color: #c7a6ff;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* Botón de contacto */
+.contact-btn {
+  font-family: 'Arimo', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  padding: 18px 20px;
+  background-color: #2e5984;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  background-color: #4c5aa6aa;
+  color: #040000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
   padding: 10px 20px;
   text-align: left;
 }
@@ -171,26 +217,38 @@ h3 {
 .footer-icons .icon-link img {
   width: 30px;
   height: 30px;
-  filter: grayscale(100%); /* Los deja en escala de grises */
+  filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
 .footer-icons .icon-link:hover img {
-  filter: none; /* Color original al pasar el mouse */
+  filter: none;
   transform: scale(1.1);
 }
-/* Para pantallas menores a 768px (móviles) */
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablets y móviles grandes */
+@media (max-width: 1024px) {
+  .section1, .section2 {
+    margin: 20px;
+    gap: 30px;
+  }
+}
+
+/* Móviles */
 @media (max-width: 768px) {
   .menu {
-    display: none; /* Oculto menú para usar hamburguesa */
+    display: none;
     width: 100%;
     flex-direction: column;
     background-color: #dad1d1;
     position: absolute;
     top: 60px;
     left: 0;
-    padding: 10px 0;
     border-top: 1px solid #ab2a2a;
     z-index: 2;
   }
@@ -210,18 +268,32 @@ h3 {
   }
 
   .barra-superior {
-    justify-content: space-between;
-    position: relative;
+    flex-wrap: wrap;
   }
 
-  .boxes {
+  .section1, .section2 {
+    margin: 10px;
     padding: 15px;
     gap: 15px;
   }
 
-  .box {
-    padding-top: 10px;
-    height: auto;
-    min-height: 250px;
+  .card {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 16px;
   }
 }

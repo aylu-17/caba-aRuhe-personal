@@ -343,15 +343,23 @@ body, html {
 }
 /* slider de actividades en sma  */
 .turismo-sma {
-  padding: 60px 20px;
+  padding: 10px 20px;
   color: #fff;
   text-align: center;
   overflow: hidden;
 }
 
+.turismo-sma a {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
 .titulo-seccion {
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .slider-wrapper {
@@ -361,6 +369,7 @@ body, html {
 }
 
 .slider-auto {
+  padding: 30px;
   display: flex;
   width: fit-content;
   animation: deslizar 30s linear infinite;
@@ -371,7 +380,7 @@ body, html {
   margin-right: 30px;
   background: rgba(255,255,255,0.05);
   border-radius: 16px;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
