@@ -270,6 +270,7 @@ body, html {
 }
 
 .ubi p {
+  font-family: 'Roboto', sans-serif;
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -304,6 +305,7 @@ body, html {
 }
 
 .tarifa p {
+  font-family: 'Roboto', sans-serif;
   font-size: 17px;
   line-height: 1.6;
   color: #dddddd;
@@ -330,6 +332,7 @@ body, html {
 }
 
 .terminosycondiciones p {
+  font-family: 'Roboto', sans-serif;
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -399,6 +402,7 @@ body, html {
 }
 
 .slide p {
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #ccc;
 }
@@ -415,7 +419,7 @@ body, html {
 /* Animación automática de scroll horizontal */
 @keyframes deslizar {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-20%); }
 }
 
 /* comentarios */

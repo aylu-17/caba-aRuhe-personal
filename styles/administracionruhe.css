@@ -147,6 +147,7 @@ h3 {
 }
 
 .card p {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
@@ -177,6 +178,7 @@ h3 {
 }
 
 .card ul li {
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 8px;
 }
 
