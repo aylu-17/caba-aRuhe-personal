@@ -74,17 +74,16 @@
             </a>
         </div>
   </footer>
-    <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('show');
-    }
-
-    document.querySelectorAll('.menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.menu').classList.remove('show');
-      });
-    });
-  </script>
+     <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.menu').classList.remove('show');
+            });
+        });
+    </script>
 </body>
 </html>

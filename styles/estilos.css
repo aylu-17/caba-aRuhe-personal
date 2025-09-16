@@ -9,8 +9,8 @@ body, html {
 /* === HEADER: Imagen de fondo principal === */
 .imagen {
   position: relative;
-  width: 110%;
-  height: 120vh;
+  width: 100%;
+  height: 110vh;
   background: url('../public/cabaña-exterior.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;

@@ -115,10 +115,11 @@ h3 {
 .section1, .section2 {
   display: flex;
   justify-content: center;
-  gap: 150px;
+  gap: 40px;
   flex-wrap: wrap;
   padding: 25px;
-  margin: 0 80px;
+  margin: 0 auto;
+  max-width: 1200px; 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -138,8 +139,8 @@ h3 {
    CARDS
 ========================= */
 .card {
-  flex: 1;
-  min-width: 250px;
+  flex: 1 1 300px;          /* ocupa espacio flexible, mínimo 300px */
+  max-width: 350px; 
   background: rgba(0,0,0,0.5);
   color: white;
   padding: 20px;

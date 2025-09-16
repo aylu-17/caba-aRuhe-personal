@@ -218,32 +218,32 @@ main {
 
 /* Móviles */
 @media (max-width: 768px) {
-.menu {
+  .menu {
     display: none;
+    flex-direction:row;
+    gap: 15px;
+    justify-content: center;
     width: 100%;
-    flex-direction: column;
-    background-color: #dad1d1;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    border-top: 1px solid #ab2a2a;
-    z-index: 2;
+    
   }
-
-  .menu.active {
+  .menu.show {
     display: flex;
   }
-
   .menu a {
-    padding: 12px 15px;
-    border-radius: 0;
-    border-bottom: 1px solid #ab2a2a;
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
   }
 
   .hamburguesa {
     display: block;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
   }
-
+  
   .barra-superior {
     flex-wrap: wrap;
   }
